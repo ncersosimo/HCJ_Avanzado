@@ -1,0 +1,27 @@
+Buenos dias curso!
+
+Armo este debate en el foro para enviar lo que será el trabajo final de curso.
+
+
+
+Este trabajo consiste en lograr imitar el siguiente sitio de referencia: https://trabajo-final-html-css-js-av.netlify.app/
+
+
+
+Para ello les dejo a continuación un enlacecon algunos detalles que les van a servir de ayuda.
+
+En este enlace  van a poder encontrar :
+
+un video informativo sobre el sitio a realizar;
+ los materiales multimedia que necesitan para poder armar el sitio (imágenes  y videos).
+un PDF que contiene la paleta de colores que utiliza el sitio.
+Enlace : https://drive.google.com/drive/folders/1Yc69oragv4MpJBZsWe-M0ao3-QMPH4dp?usp=sharing
+Recuerden que hay cosas en el sitio que con los conceptos que ya tienen v van a poder empezar a armarlo, pero para otros van a necesitar de las unidades que semana a semana  se van a ir habilitando.
+
+Tengan en cuenta no dejarlo para ultimo momento e ir de a poco creandolo para llegar tranquilos a la entrega final.
+
+Para la aprovacion del trabajo, el mismo debe lograr imitar la funcionalidad y el estilo del sitio.
+
+Cualquier duda o consulta estoy a su disposición.
+
+Saludos!
