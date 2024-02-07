@@ -1,4 +1,4 @@
-/* Para la página dedicada a la página historia.html */
+/* Para la página historia.html */
 let miVideo = document.querySelector('video');
 let botonPlay = document.getElementById('play');
 let botonPause = document.getElementById('pause')
@@ -19,7 +19,7 @@ function silencio(){
     miVideo.muted = !miVideo.muted;
 }
 
-document.addEventListener('keydown', function (event) {
+document.addEventListener('keydown', (event)=> {
     
     // Obtengo la tecla presionada
     let letraPulsada = event.key.toLowerCase();
@@ -40,23 +40,25 @@ document.addEventListener('keydown', function (event) {
 });
 
 // Si se hace click sobre el video
-miVideo.addEventListener('click', function() {
+miVideo.addEventListener('click', ()=> {
     reproduccion();
 });
 
 // Si se hace click sobre el botón play
-botonPlay.addEventListener('click', function () {
+botonPlay.addEventListener('click', ()=> {
     reproduccion();
 });
 
 // Si se hace click sobre el botón pause
-botonPause.addEventListener('click', function () {
+botonPause.addEventListener('click', ()=> {
     reproduccion();
 });
 
 // Si se hace click sobre el botón unmute
 let botonUnmute = document.getElementById('unmute');
-botonUnmute.addEventListener('click', function () {
+botonUnmute.addEventListener('click', ()=> {
     silencio();
 });
+
+
 
