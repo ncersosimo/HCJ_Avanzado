@@ -3,8 +3,6 @@ let subtitulo = document.querySelector('h2');
 let validacion1 = false;
 let validacion2 = false;
 let validacion3 = false;
-let valido = false;
-let contador = 0;
 
 function permitoSoltar(evento) {
     evento.preventDefault();
@@ -33,16 +31,8 @@ function soltar(evento) {
         validacion3 = true;
     }
     
-    valido = validacion1 && validacion2 && validacion3;
-    if(valido){
-        console.log("Gano");
+    if(validacion1 && validacion2 && validacion3){
         subtitulo.innerHTML = "Completó con Exito el Rompecabezas!!!";
-    }
-
-    contador += 1;
-
-    if(contador === 3 && valido === false){
-        subtitulo.innerHTML = "Completó el Rompecabezas Erroneamente";
     }
 }
 
@@ -61,9 +51,6 @@ function reinicio(){
     validacion1 = false;
     validacion2 = false;
     validacion3 = false;
-    valido = false;
-    
-    contador = 0;
 }
 // Esto se ejecuta al cargar el html
 // https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event
