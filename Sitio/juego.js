@@ -1,4 +1,5 @@
 let cajas = document.querySelectorAll('.caja');
+let imagenes = document.querySelectorAll('img');
 let subtitulo = document.querySelector('h2');
 let validacion1 = false;
 let validacion2 = false;
@@ -13,21 +14,21 @@ function inicioArrastre(evento) {
 }
 
 function soltar(evento) {
-    let data = evento.dataTransfer.getData("text");    
+    let idImagen = evento.dataTransfer.getData("text");    
 
-    let imagen = document.getElementById(data);
+    let imagen = document.getElementById(idImagen);
     evento.target.innerHTML = imagen.outerHTML;
     imagen.style.display = "none";
 
-    if (evento.target.id == "cajasoltar" && data == "imagen2"){
+    if (evento.target.id == "cajasoltar" && idImagen == "imagen2"){
         validacion1 = true;
     }
 
-    if (evento.target.id == "cajasoltar2" && data == "imagen1"){
+    if (evento.target.id == "cajasoltar2" && idImagen == "imagen1"){
         validacion2 = true;
     }
 
-    if (evento.target.id == "cajasoltar3" && data == "imagen3"){
+    if (evento.target.id == "cajasoltar3" && idImagen == "imagen3"){
         validacion3 = true;
     }
     
@@ -37,7 +38,6 @@ function soltar(evento) {
 }
 
 function reinicio(){
-    let imagenes = document.querySelectorAll('img');
     imagenes.forEach((imagen)=> {
         imagen.style.display = "inline"
     });
@@ -59,6 +59,11 @@ document.addEventListener("DOMContentLoaded", ()=> {
     cajas.forEach((caja)=> {
         caja.addEventListener('dragover', permitoSoltar);
         caja.addEventListener('drop', soltar);
+    });
+    
+    // Creo el addEventListener por cada elemento que sea imagen
+    imagenes.forEach((imagen)=> {
+        imagen.addEventListener('dragstart', inicioArrastre);
     });
 });
 

@@ -93,7 +93,7 @@ svg {
   @keyframes rellenos {
     from {
       opacity: 0;
-      transform: translateY(-50px);
+      transform: translateY(-10px);
     }
     to {
       opacity: 1;
@@ -102,14 +102,13 @@ svg {
   }
   
 #tec1, #mon1 {
-    animation: contornos 1s ease-out;
+    animation: contornos 2.5s ease-out;
     animation-fill-mode: forwards;
   }
   
 #tec2, #mon2 {
-    animation: rellenos 1s ease-out;
-    /* Retraso de 0.5 segundos para que aparezcan después de tec1 y mon1 */
-    animation-delay: 0.5s;
+    animation: rellenos 0.5s ease-out;
+    animation-delay: 2s;
     animation-fill-mode: forwards;
   }
 
@@ -137,10 +136,13 @@ svg {
     font-weight: 300;
 }
 
-/* Pasar ésta transform a JS */
-/* Ademas de la regla debajo, hay que quitar el box-shadow de .item-link */
+/* Al hacer click, simulo la presión sobre el botón */
 .item-menu:active {
-    transform: scale(0.99) translateX(5px);
+    transform: translateX(2px);
+}
+
+.item-link:active{
+    box-shadow: none;
 }
 
 /* Header */
@@ -236,8 +238,6 @@ footer {
     color: var(--colorAzul);
 }
 
-/* Realiza la transform en JS */
-/* Tener en cuenta la regla de .item-menu:active, hay que quitar el box-shadow */
 
 .boton-ver {
     padding: 10px;
@@ -251,6 +251,13 @@ footer {
     text-decoration: none;
     width: 40%;
     margin-bottom: 20px;
+    transition: transform 0.1s;
+}
+
+/* Al hacer click, simulo la presión sobre el botón */
+.boton-ver:active {
+    transform: translateX(2px);
+    box-shadow: none;
 }
 
 /* Contenido de la página Historia */
@@ -312,6 +319,13 @@ video {
     background-color: var(--colorBeige);
     color: var(--colorAzul);
     font-weight: 300;
+    transition: transform 0.1s;
+}
+
+/* Al hacer click, simulo la presión sobre el botón */
+.botonesVideo:active {
+    transform: translateX(2px);
+    box-shadow: none;
 }
 
 #play, #pause, #unmute {
